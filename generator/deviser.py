@@ -47,9 +47,12 @@
 import sys
 
 try:
-    from util import generateLatex, generateCode, global_variables as gv
+    from generator.util import generateLatex, global_variables as gv
+    #from .util import generateLatex, generateCode, global_variables as gv
+    from generator.util.generateCode import generate_code_for
 except:
-    from util import global_variables as gv
+    #from generator.util import global_variables as gv
+    from .util import global_variables as gv
     gv.code_returned = gv.return_codes['unknown error - please report']
 #from legacy import run
 
@@ -61,8 +64,8 @@ def generatePackageFor(filename):
     libSBML code that can be integrated with the existing libSBML source tree
     to add libSBML support for the package.
     """
-    generateCode.generate_code_for(filename, True)
-
+    #generateCode.generate_code_for(filename, True)
+    generate_code_for(filename, True)
 
 #def generateLegacyPackageFor(filename):
 #    """This function generates a libSBML extension for the given filename

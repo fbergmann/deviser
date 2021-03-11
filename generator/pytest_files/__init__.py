@@ -1,2 +1,2 @@
-from generator import *
-
+#from generator import *
+#from . import
