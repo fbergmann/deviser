@@ -8,13 +8,13 @@ setup(
     include_package_data=True,
     entry_points={  # Optional
         'console_scripts': [
-            'deviser=deviser.exit()'
-            'deviser:main',
+            'deviser=deviser:main',
         ],
     },
     url='',
     license='',
     author='Sarah Keating',
     author_email='',
-    description='', install_requires=['pytest']
+    description='', 
+    install_requires=['pytest']
 )
